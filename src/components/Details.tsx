@@ -1,4 +1,3 @@
-import react from '../assets/react.png'
 import justice from '../assets/justice.jpg'
 import hammer from '../assets/hammer.jpg'
 import lawbook from '../assets/lawbook.png'

@@ -1,5 +1,3 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
-
 export default function Example() {
   return (
     <div className="relative isolate overflow-hidden py-14 dark:bg-gray-900">      
