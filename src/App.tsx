@@ -3,10 +3,10 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Spacer from './components/Spacer'
-import Projects from './components/Projects'
+import Profile from './components/Profile'
 import Contact from './components/Contact'
 import { BrowserRouter } from 'react-router-dom';
-import Details from './components/Details'
+import Experience from './components/Experience'
 import { Element } from 'react-scroll'
 import ScrollAnimationObserver from './components/ScrollAnimationObserver'
 import { useState } from 'react'
@@ -23,28 +23,28 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header currentNav = {currentNav} setCurrentNav={setCurrentNav} clickHandler={incNav} />
-        <div className="">          
-          <ScrollAnimationObserver setCurrentNav={setCurrentNav}>
+      <ScrollAnimationObserver setCurrentNav={setCurrentNav}>
+      
+        <Header currentNav = {currentNav} setCurrentNav={setCurrentNav} clickHandler={incNav} />      
             <Element id= "" name="/">
-                {nbNav>0 && <Spacer />}
+                {/*nbNav>0 && <Spacer />*/}
                 <Hero />
             </Element>
-            <Element id = "/competence" name="/competence">
+            <Element id = "/experience" name="/experience">
               <Spacer />
-              <Details />
+              <Experience />
             </Element>
-            <Element id = "/projects" name="/projects">
+            <Element id = "/profile" name="/profile">
               <Spacer />
-              <Projects />
+              <Profile />
             </Element>
             <Element id="/contact" name="/contact">
               <Spacer />
               <Contact />
             </Element>
-          </ScrollAnimationObserver>
+          
         <Footer />
-        </div>
+        </ScrollAnimationObserver>
       </BrowserRouter>
     </>
   )

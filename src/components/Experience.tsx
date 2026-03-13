@@ -20,9 +20,9 @@ const features = [
   }
 ]
 
-export default function Details() {
+export default function Experience() {
   return (
-    <div className="py-10 dark:bg-gray-900 justify-center animate-on-scroll h-[calc(100dvh-20*var(--spacing))]" id="/competence">    
+    <div className="py-10 dark:bg-gray-900 justify-center animate-on-scroll" id="/experience">    
       <div className="mx-auto px-6 lg:px-8 flex flex-col items-center">
         <div className="mx-auto max-w-2xl">          
           <h1 className="text-3xl cinzel-font imgToAnimate mt-2 bg-purple-400/40 rounded-xl p-4 font-semibold tracking-tight text-pretty text-center">

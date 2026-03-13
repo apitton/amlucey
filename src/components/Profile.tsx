@@ -1,6 +1,6 @@
-export default function Example() {
+export default function Profile() {
   return (
-    <div className="relative isolate overflow-hidden py-14 dark:bg-gray-900">      
+    <div className="relative isolate overflow-hidden py-14 dark:bg-gray-900 animate-on-scroll" id="/profile">      
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">          
           
