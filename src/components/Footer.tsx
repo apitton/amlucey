@@ -1,4 +1,8 @@
 import legal500 from '../assets/legal500.png'
+import { Link } from 'react-scroll'
+import { handleClick } from '@/components/Header'
+import { Avatar } from './ui/tailwind/avatar'
+import { client } from '@/App'
 
 const navigation = [
   
@@ -19,23 +23,41 @@ const navigation = [
 
 
 
-export default function Footer() {
+export default function Footer({clickHandler, setCurrentNav}: {clickHandler: ()=>void, setCurrentNav: (newPath: string)=>void}) {
   return (
     <footer className="bg-sky-700/80">
       <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8 flex justify-around">
         <div>
-          <img src={legal500} className="size-12"/>
+          <Link onClick={()=>handleClick({newPath: "/", clickHandler: ()=> clickHandler, setCurrentNav: ()=>setCurrentNav})} to="/" offset={-80} smooth={true} duration={500}>
+            <div className="flex gap-3 cursor-pointer">
+                <Avatar className="size-15" src={client.photo} />
+                <div className="flex flex-col justify-center text-white">
+                    <div className="cinzel-font">{client.firstName} {client.lastName}</div>
+                    <div className="cinzel-font">{client.role}</div>
+                </div>
+            </div>
+          </Link>
+          
+        </div>
+        <div className="text-white flex flex-col items-start">
+          <strong>Contact Trinity Chambers</strong>
+          <p>
+            Tel: 01245 605040<br></br>
+            clerks@trinitychambers.com
+          </p>
+
         </div>
         <div className="flex justify-center gap-x-6 md:order-2">
+          <img src={legal500} className="size-12"/>
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
               target="_blank"
-              className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white"
+              className="text-white hover:text-gray-800 dark:text-gray-400 dark:hover:text-white"
             >
               <span className="sr-only">{item.name}</span>
-              <item.icon aria-hidden="true" className="size-6" />
+              <item.icon aria-hidden="true" className="size-12" />
             </a>
           ))}
         </div>
