@@ -9,14 +9,10 @@ import ArticlesSection from './components/ArticlesSection'
 import { BrowserRouter } from 'react-router-dom';
 import Experience from './components/Experience'
 import { Element } from 'react-scroll'
-import Articles from './components/Article'
 import Article from './components/Article'
 import ScrollAnimationObserver from './components/ScrollAnimationObserver'
-import MainPage from './MainPage'
 import { useState, useEffect } from 'react'
-import { Routes, Route } from 'react-router'
 import photo from './assets/profile_pic.png'
-
 export type Art = { id: number, title: string; article: string, excerpt: string }
 export type article = { id: number; title: {rendered: string}; content: {rendered: string}; date: string; excerpt: {rendered: string}};
 export const client = {url: "aml", firstName: "Anne-Marie", lastName: "Lucey", role: "Barrister", photo: photo}
@@ -97,7 +93,7 @@ function App() {
               </Element>
           </ScrollAnimationObserver>
           
-        <Footer />
+        <Footer clickHandler={incNav} setCurrentNav={setCurrentNav}/>
         
       </BrowserRouter>
     </>

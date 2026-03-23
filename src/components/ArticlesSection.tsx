@@ -1,6 +1,4 @@
 import photo from '../assets/profile_pic.png'
-
-import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import type { Art } from '../App'
 
