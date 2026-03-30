@@ -4,18 +4,18 @@ import lawbook from '../assets/lawbook.png'
 
 const features = [
   {
-    name: 'I go to court for you',
-    description: 'and rip their balls off.',
+    name: '20 years of experience',
+    description: 'as a family law barrister.',
     icon: hammer,    
   },
   {
-    name: 'I know the law',
-    description: 'The others are just wankers',
+    name: 'Divorce or separation',
+    description: 'and TOLATA claims',
     icon: justice,
   },
   {
-    name: "Don't fuck about",
-    description: "I'm irish",
+    name: "expertise in the cross examination of experts and other witnesses",
+    description: "in complex, fact-finding hearings.",
     icon: lawbook,
   }
 ]
